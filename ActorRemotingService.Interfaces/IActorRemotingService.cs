@@ -4,7 +4,6 @@ using Microsoft.ServiceFabric.Actors;
 
 namespace ActorRemotingService.Interfaces
 {
-    using Microsoft.ServiceFabric.Services.Remoting;
 
     /// <summary>
     /// This interface defines the methods exposed by an actor.

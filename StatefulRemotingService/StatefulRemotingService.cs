@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Fabric;
-using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.ServiceFabric.Data.Collections;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
+using Microsoft.ServiceFabric.Data;
+using Microsoft.ServiceFabric.Services.Remoting.FabricTransport.Runtime;
+using FibonacciSeq;
 
 
 namespace StatefulRemotingService
 {
-    using FibonacciSeq;
-
-    using Microsoft.ServiceFabric.Data;
-    using Microsoft.ServiceFabric.Services.Remoting.FabricTransport.Runtime;
 
     /// <summary>
     /// An instance of this class is created for each service replica by the Service Fabric runtime.

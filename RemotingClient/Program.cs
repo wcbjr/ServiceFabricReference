@@ -13,6 +13,10 @@ namespace RemotingClient
 
     class Program
     {
+        /// <summary>
+        /// This a client that is used to connect to the Service Fabric services using remoting
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             bool isContinue = true;

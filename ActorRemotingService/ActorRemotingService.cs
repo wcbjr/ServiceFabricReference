@@ -2,9 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.ServiceFabric.Actors.Runtime;
 using ActorRemotingService.Interfaces;
-using Microsoft.ServiceFabric.Data;
 using ServiceFabricMocks;
-using ServiceFabricServiceModel;
 using FibonacciSeq;
 
 namespace ActorRemotingService
@@ -27,6 +25,7 @@ namespace ActorRemotingService
         {
             base.StateManager = stateManager;
         }
+
         public async Task<List<int>> CalcFibSequence(int number)
         {
             IFibSeq fibSequence = new FibSeq();

@@ -16,7 +16,19 @@ namespace RemotingTests
     {
         [TestCase()]
         public void StatelessRemotingTest()
-        {
+        {          
+            //Parameters
+            // ApplicationName (string)
+            // ApplicationTypeName (string)
+            // CodePackageName (string)
+            // CodePackageVersion (string)
+            // Context (string)
+            // LogDirectory (string)
+            // TempDirectory (string)
+            // WorkDirectory (string)
+            // ServiceManifestName (string)
+            // ServiceManifestVersion (string)
+              
             ICodePackageActivationContext packageContext = new MockCodePackageActivationContext(
                 "fabric:/ServiceFabricReference",
                 "StatefulRemotingService",
@@ -29,6 +41,16 @@ namespace RemotingTests
                 "ServiceManifest",
                 "1.0.0"
                 );
+
+            //Parameters
+            // nodeContext (NodeContext) - NodeName (string), nodeId (NodeId), nodeInstanceId (BigInteger), nodeType (string), ipAddressOrFDQN (string)
+            // codePackageActivationContext (ICodePackageActivationContext)
+            // serviceTypeName (string)
+            // serviceName (Uri)
+            // initializationData (byte[])
+            // partitionId (Guid)
+            // instanceId (long)
+            
             StatelessServiceContext context = new StatelessServiceContext(
                 new NodeContext("Node0", new NodeId(0, 1), 0, "NodeType1", "http://localhost"),
                 packageContext,
@@ -38,6 +60,7 @@ namespace RemotingTests
                 new Guid(),
                 long.MaxValue
                 );
+
             IStatelessRemotingService testClient = new StatelessRemotingService(context);
 
             List<int> expected = new List<int>() {1, 1, 2, 3, 5, 8, 13, 21, 34, 55};
